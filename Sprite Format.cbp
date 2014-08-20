@@ -72,11 +72,8 @@
 				<Option compiler="tdm_gcc_64_compiler" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="../FLTK" />
+					<Add directory="../fltk-1.3.2" />
 				</Compiler>
-				<Linker>
-					<Add library="lib\libSprite.a" />
-				</Linker>
 			</Target>
 			<Target title="Release Gui">
 				<Option output="bin/Spriter" prefix_auto="1" extension_auto="1" />
@@ -85,7 +82,7 @@
 				<Option type="0" />
 				<Option compiler="tdm_gcc_64_compiler" />
 				<Compiler>
-					<Add directory="../FLTK" />
+					<Add directory="../fltk-1.3.2" />
 				</Compiler>
 				<Linker>
 					<Add option="extlib\libfltk.a" />
