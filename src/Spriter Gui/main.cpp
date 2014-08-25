@@ -3,6 +3,8 @@
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Box.H>
 #include <Fl/Fl_Text_Display.H>
+#include "AnimTable.hpp"
+#include "ImgTable.hpp"
 
 void CreateGui() {
     Fl_Window* window = new Fl_Window(340,80,800,600,"Spriter");
@@ -35,19 +37,31 @@ void CreateGui() {
     (new Fl_Box(FL_FLAT_BOX,10,90,780,1,0))->color(fl_rgb_color(100,100,100));
 
     // Section frames
-    Fl_Box* ImageSection = new Fl_Box(FL_EMBOSSED_FRAME,	 10,100,400,490,0);
+    new Fl_Box(FL_EMBOSSED_FRAME,	 10,100,300,490,0); // ImageSection
     //Fl_Box* AnimationSection = new Fl_Box(FL_EMBOSSED_FRAME,220,100,200,300,0);
 
     // Image section
     Fl_Box* imgtitle = new Fl_Box(30,110,10,10,"Images");
     imgtitle->align(FL_ALIGN_TOP | FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
     imgtitle->labelsize(16);
-    (new Fl_Box(FL_FLAT_BOX,20,130,380,2,0))->color(fl_rgb_color(255,255,255));
-    (new Fl_Box(FL_FLAT_BOX,20,130,380,1,0))->color(fl_rgb_color(100,100,100));
+    (new Fl_Box(FL_FLAT_BOX,20,130,280,2,0))->color(fl_rgb_color(255,255,255));
+    (new Fl_Box(FL_FLAT_BOX,20,130,280,1,0))->color(fl_rgb_color(100,100,100));
 
+	ImgTable* Images = new ImgTable(20,140,200,200);
+    Images->selection_color(FL_YELLOW);
+    Images->when(FL_WHEN_RELEASE|FL_WHEN_CHANGED);
+    Images->table_box(FL_NO_BOX);
 
+    // ROWS
+    Images->rows(5);
+    Images->row_height_all(15);
 
-    new Fl_Box(FL_BORDER_BOX,	 25,480,100,100,0);
+    // COLS
+    Images->cols(1);
+    Images->col_width_all(198);
+	Images->end();
+
+    new Fl_Box(FL_BORDER_BOX,	 20,480,100,100,0);
     window->end();
 }
 

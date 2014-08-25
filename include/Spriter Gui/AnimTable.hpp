@@ -7,7 +7,7 @@
 class AnimTable : public Fl_Table
 {
     public:
-        AnimTable(int X, int Y, int W, int H, const char* l);
+        AnimTable(int X, int Y, int W, int H, const char* l = 0);
         virtual ~AnimTable();
     protected:
     private:

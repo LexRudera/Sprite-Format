@@ -106,6 +106,10 @@
 			<Option target="Debug Gui" />
 			<Option target="Release Gui" />
 		</Unit>
+		<Unit filename="include/Spriter Gui/ImgTable.hpp">
+			<Option target="Debug Gui" />
+			<Option target="Release Gui" />
+		</Unit>
 		<Unit filename="png/png.c">
 			<Option compilerVar="CC" />
 			<Option target="Shared Library Debug " />
@@ -248,6 +252,10 @@
 			<Option target="Static Library Release" />
 		</Unit>
 		<Unit filename="src/Spriter Gui/AnimTable.cpp">
+			<Option target="Debug Gui" />
+			<Option target="Release Gui" />
+		</Unit>
+		<Unit filename="src/Spriter Gui/ImgTable.cpp">
 			<Option target="Debug Gui" />
 			<Option target="Release Gui" />
 		</Unit>

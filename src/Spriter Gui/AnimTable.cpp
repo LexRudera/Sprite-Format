@@ -1,6 +1,6 @@
 #include "AnimTable.hpp"
 
-AnimTable::AnimTable(int X, int Y, int W, int H, const char* l = 0) :
+AnimTable::AnimTable(int X, int Y, int W, int H, const char* l) :
 Fl_Table(X, Y, W, H)
 {
     //ctor
